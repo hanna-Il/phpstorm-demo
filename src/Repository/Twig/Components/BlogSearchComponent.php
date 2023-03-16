@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Twig\Components;
+namespace Repository\Twig\Components;
 
 use App\Entity\Post;
 use App\Repository\PostRepository;

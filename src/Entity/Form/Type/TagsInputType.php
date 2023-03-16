@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Form\Type;
+namespace Entity\Form\Type;
 
-use App\Form\DataTransformer\TagArrayToStringTransformer;
 use App\Repository\TagRepository;
+use Entity\Form\DataTransformer\TagArrayToStringTransformer;
 use Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

@@ -9,40 +9,46 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Form;
+namespace Entity\Form;
 
-use App\Entity\Comment;
+use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Defines the form used to create and manipulate blog comments. Although in this
- * case the form is trivial and we could build it inside the controller, a good
- * practice is to always define your forms as classes.
+ * Defines the form used to edit an user.
  *
- * See https://symfony.com/doc/current/forms.html#creating-form-classes
- *
- * @author Ryan Weaver <weaverryan@gmail.com>
- * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @author Romain Monteil <monteil.romain@gmail.com>
  */
-class CommentType extends AbstractType
+class UserType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        // For the full reference of options defined by each form field type
+        // see https://symfony.com/doc/current/reference/forms/types.html
+
         // By default, form fields include the 'required' attribute, which enables
         // the client-side form validation. This means that you can't test the
         // server-side validation errors from the browser. To temporarily disable
         // this validation, set the 'required' attribute to 'false':
-        // $builder->add('content', null, ['required' => false]);
+        // $builder->add('title', null, ['required' => false, ...]);
 
         $builder
-            ->add('content', TextareaType::class, [
-                'help' => 'help.comment_content',
+            ->add('username', TextType::class, [
+                'label' => 'label.username',
+                'disabled' => true,
+            ])
+            ->add('fullName', TextType::class, [
+                'label' => 'label.fullname',
+            ])
+            ->add('email', EmailType::class, [
+                'label' => 'label.email',
             ])
         ;
     }
@@ -53,7 +59,7 @@ class CommentType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Comment::class,
+            'data_class' => User::class,
         ]);
     }
 }

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Security;
+namespace Repository\Security;
 
 use App\Entity\Post;
 use App\Entity\User;

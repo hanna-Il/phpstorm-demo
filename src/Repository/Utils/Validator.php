@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Utils;
+namespace Repository\Utils;
 
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use function Symfony\Component\String\u;

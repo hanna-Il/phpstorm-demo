@@ -13,9 +13,9 @@ namespace App\Repository;
 
 use App\Entity\Post;
 use App\Entity\Tag;
-use App\Pagination\Paginator;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Entity\Pagination\Paginator;
 use function Symfony\Component\String\u;
 
 /**

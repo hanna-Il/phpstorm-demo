@@ -13,10 +13,10 @@ namespace App\Controller\Admin;
 
 use App\Entity\Post;
 use App\Entity\User;
-use App\Form\PostType;
 use App\Repository\PostRepository;
-use App\Security\PostVoter;
 use Doctrine\ORM\EntityManagerInterface;
+use Entity\Form\PostType;
+use Repository\Security\PostVoter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\SubmitButton;

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Form\DataTransformer;
+namespace Entity\Form\DataTransformer;
 
 use App\Entity\Tag;
 use App\Repository\TagRepository;

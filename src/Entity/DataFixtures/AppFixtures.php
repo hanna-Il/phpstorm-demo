@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\DataFixtures;
+namespace Entity\DataFixtures;
 
 use App\Entity\Comment;
 use App\Entity\Post;

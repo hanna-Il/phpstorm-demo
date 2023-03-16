@@ -12,9 +12,9 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Form\ChangePasswordType;
-use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
+use Entity\Form\ChangePasswordType;
+use Entity\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

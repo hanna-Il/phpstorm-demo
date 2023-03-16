@@ -13,9 +13,9 @@ namespace App\Command;
 
 use App\Entity\User;
 use App\Repository\UserRepository;
-use App\Utils\Validator;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
+use Repository\Utils\Validator;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\RuntimeException;
